@@ -21,8 +21,8 @@ import java.math.BigDecimal;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest
-@Testcontainers
 @AutoConfigureMockMvc
+@Testcontainers
 class ProductServiceApplicationTests {
     @Autowired
     private  ProductRepository productRepository;

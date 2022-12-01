@@ -21,11 +21,11 @@ public class InventoryServiceApplication {
         return args -> {
             Inventory firstData = new Inventory();
             firstData.setSkuCode("phone_black");
-            firstData.setQuantity(120);
+            firstData.setQuantity(0);
 
             Inventory secondData = new Inventory();
             secondData.setSkuCode("phone_red");
-            secondData.setQuantity(0);
+            secondData.setQuantity(120);
 
 
             inventoryRepository.save(firstData);

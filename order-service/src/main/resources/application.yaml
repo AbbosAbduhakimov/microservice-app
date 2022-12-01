@@ -1,3 +1,5 @@
+server:
+  port: 8082
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
@@ -7,4 +9,12 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
+  application:
+    name: order-service
+
+  cloud:
+   client:
+     service-url:
+        defaultZone: http://localhost:8761/eureka/
+

@@ -3,6 +3,7 @@ package uz.abbos.service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import uz.abbos.dto.ProductDto;
 import uz.abbos.model.Product;
 import uz.abbos.repository.ProductRepository;
@@ -12,6 +13,7 @@ import java.util.stream.Collectors;
 
 @Service
 @Slf4j
+@Transactional
 public class ProductService {
     private final ProductRepository productRepository;
 
@@ -32,7 +34,7 @@ public class ProductService {
         log.info("Product {} is saved", result.getId());
     }
 
-
+    @Transactional(readOnly = true)
     public List<ProductDto> getAll() {
         List<Product> products = productRepository.findAll();
         log.info("Quantities of products {}",products.size());

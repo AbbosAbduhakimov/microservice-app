@@ -2,11 +2,10 @@ package uz.abbos.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import uz.abbos.dto.ResponseModel;
 import uz.abbos.service.InventoryService;
+import java.util.List;
 
 @RestController
 @RequestMapping("/inver")
@@ -19,8 +18,8 @@ public class InventoryController {
         this.inventoryService = inventoryService;
     }
 
-    @GetMapping("/{sku-code}")
-    public ResponseEntity<Boolean> isInStock(@PathVariable("sku-code") String skuCode){
+    @GetMapping
+    public ResponseEntity<List<ResponseModel>> isInStock(@RequestParam("sku-code") String ...skuCode){
         return ResponseEntity.ok(inventoryService.isInStock(skuCode));
     }
 }
