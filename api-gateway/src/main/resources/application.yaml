@@ -1,34 +1,49 @@
 server:
   port: 8080
 spring:
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          issuer-uri: http://localhost:8181/auth/realms/microservice-app
   cloud:
     gateway:
       routes:
-       - id: product-service
-         uri: lb://product-service
-         predicates:
-         - Path=/product
-         - Method=GET, POST
-       - id: order-service
-         uri: lb://order-service
-         predicates:
-            - Path=/order
+
+        - id: product-service
+          uri: lb://product-service
+          predicates:
+            - Path=/product
             - Method=GET,POST
-#          discovery server route
-       - id: discovery-server
-         uri: http://discovery-server
-         predicates:
-            - Path=
+
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - Path=/order
+            - Method=POST
+
+        - id: inventory-service
+          uri: lb://inventory-service
+          predicates:
+            - Path=/inver
+            - Method=GET,POST
+
+#        discovery-server connect
+        - id: discovery-server-static
+          uri: http://localhost:8761
+          predicates:
+            - Path=/eureka/web
+#          filters:
+#            - SetPath=/
   application:
     name: api-gateway
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
-
+      defaultZone: http://localhost:8761/eureka
+      #Logging properties
 logging:
   level:
+    org.springframework.cloud.gateway.route.RouteDefinitionLocator: INFO
     org.springframework.cloud.gateway: TRACE
-    org.springframework.cloud.gateway.route:
-          RouteDefinitionLocator : INFO
     root: INFO

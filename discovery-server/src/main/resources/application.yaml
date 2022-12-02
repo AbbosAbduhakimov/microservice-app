@@ -9,3 +9,6 @@ eureka:
 spring:
   application:
     name: eureka
+
+username: ${EUREKA_USERNAME:eureka}
+password: ${EUREKA_PASSWORD:password}
