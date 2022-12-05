@@ -1,5 +1,6 @@
 package uz.abbos.controller;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,8 +23,13 @@ public class OrderController {
     }
 
     @PostMapping
-    public ResponseEntity<Void> create(@RequestBody OrderDto request) {
+    @CircuitBreaker(name = "inventory",fallbackMethod = "fallbackMethod")
+    public String create(@RequestBody OrderDto request) {
         orderService.createOrder(request);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return "Order created";
+    }
+
+    public String fallbackMethod(OrderDto orderDto,RuntimeException runtimeException){
+        return "Something went wrong,please order after some time";
     }
 }

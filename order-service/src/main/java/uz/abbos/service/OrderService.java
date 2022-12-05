@@ -31,7 +31,7 @@ public class OrderService {
         this.webClientBuilder = webClientBuilder;
     }
 
-    public void createOrder(OrderDto request) {
+    public String createOrder(OrderDto request) {
         Order order = new Order();
         order.setOrderNumber(UUID.randomUUID().toString());
 
@@ -57,6 +57,7 @@ public class OrderService {
         if (result) {
             orderRepository.save(order);
             log.info("Order {} is saved", order.getId());
+            return "Created Order";
         }else {
             log.info("Order failed");
             throw new IllegalArgumentException("Products is not inStock please try again,or choose another product");

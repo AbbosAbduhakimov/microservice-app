@@ -5,7 +5,7 @@ spring:
     oauth2:
       resource-server:
         jwt:
-          issuer-uri: http://localhost:8181/auth/realms/microservice-app
+          issuer-uri: http://localhost:8181/auth/realms/master
   cloud:
     gateway:
       routes:
