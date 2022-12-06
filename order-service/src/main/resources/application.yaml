@@ -1,13 +1,18 @@
 server:
   port: 8082
+
 spring:
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://localhost:9411
+
   cloud:
     client:
-      enabled: true
-      fetch-registry: true
       service-url:
-        default-zone: http://localhost:8761/eureka
-
+        defaultZone: http://localhost:8761/eureka
+#  Database Properties
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/order_service_db
@@ -20,6 +25,18 @@ spring:
   application:
     name: order-service
 
+#  Kafka Properties
+  kafka:
+    bootstrap-servers: localhost:9092
+    template:
+      default-topic: notificationTopic
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring:
+          json-type-mapping:
+              event=uz.abbos.event.OrderPlacedEvent
 management:
   health:
     circuit-breakers:
@@ -40,9 +57,28 @@ resilience4j:
       inventory:
         register-health-indicator: true
         event-consumer-buffer-size: 10
-        sliding-window-type: count_based
+#       THIS CONFIG FOUNDED BY COUNT
+        sliding-window-type: COUNT_BASED # TIME_BASED
         sliding-window-size: 5
         failure-rate-threshold: 50
+#       this config ignored previous config even if the request thresholds reach up to 50%, wait until the end of the minimum call
+#        minimum-number-of-calls: 10
         wait-duration-in-open-state: 5s
-        permitted-number-of-calls-in-half-open-state: 3
         automatic-transition-from-open-to-half-open-enabled: true
+#        for check if other replicas are running,therefore it is desirable to insert a replica number
+#        this config you can see on half open state in buffer-size parameter
+        permitted-number-of-calls-in-half-open-state: 3
+#       this config don't worked with  permitted-in-half-open-state config this is an alternative to place counter,seconds
+        exponential-max-wait-duration-in-open-state: 5s
+
+#       Resilience4j Retry properties
+  retry:
+    instances:
+      inventory:
+        enable-exponential-backoff: true
+        max-attempts: 5
+        wait-duration: 5s
+  time-limiter:
+    instances:
+      inventory:
+        timeout-duration: 5s

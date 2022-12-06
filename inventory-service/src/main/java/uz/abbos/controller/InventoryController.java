@@ -20,6 +20,7 @@ public class InventoryController {
 
     @GetMapping
     public ResponseEntity<List<ResponseModel>> isInStock(@RequestParam("sku-code") String ...skuCode){
-        return ResponseEntity.ok(inventoryService.isInStock(skuCode));
+        List<ResponseModel> inStock = inventoryService.isInStock(skuCode);
+        return ResponseEntity.ok(inStock);
     }
 }

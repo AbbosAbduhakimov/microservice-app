@@ -21,10 +21,14 @@ public class InventoryService {
     }
 
     public List<ResponseModel> isInStock(String... skuCode) {
-        return inventoryRepository.findInventoriesBySkuCodeIn(skuCode)
+        List<ResponseModel> result = inventoryRepository.findInventoriesBySkuCodeIn(skuCode)
                 .stream().map(inventory -> ResponseModel.builder()
                         .skuCode(inventory.getSkuCode())
                         .isInStock(inventory.getQuantity() > 0)
                         .build()).collect(Collectors.toList());
+        if (result.isEmpty()){
+            return null;
+        }
+        return result;
     }
 }
