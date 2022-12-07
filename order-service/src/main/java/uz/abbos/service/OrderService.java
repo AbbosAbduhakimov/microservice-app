@@ -50,7 +50,8 @@ public class OrderService  {
 
 
         //  call InventoryService,and place order if products is in stock
-        InventoryResponse[] inventoryResponsesArray = webClientBuilder.build().get()
+        InventoryResponse[] inventoryResponsesArray =
+                webClientBuilder.build().get()
                 .uri("http://inventory-service/inver",uriBuilder -> uriBuilder.queryParam("sku-code",skuCodes).build())
                 .retrieve()
                 .bodyToMono(InventoryResponse[].class)
