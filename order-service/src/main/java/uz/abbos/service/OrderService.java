@@ -65,7 +65,7 @@ public class OrderService  {
 
         if (result) {
             orderRepository.save(order);
-            kafkaTemplate.send("notificationTopic",new OrderPlacedEvent(order.getOrderNumber()));
+            kafkaTemplate.send("notificationTopic","orderKey",new OrderPlacedEvent(order.getOrderNumber()));
             log.info("Order {} is saved", order.getId());
             return "Created Order";
         }

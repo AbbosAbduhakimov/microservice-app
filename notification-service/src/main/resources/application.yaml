@@ -16,12 +16,13 @@ spring:
     name: notification-service
 
   kafka:
-    bootstrap-servers: localhost:9092
-    template:
-      default-topic: notificationTopic
     consumer:
+      bootstrap-servers:
+        - localhost:9092
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
-        spring.json.trusted.package: 'uz.abbos.OrderPlacedEvent'
+        "[spring.json.type.mapping]": event:uz.abbos.OrderPlacedEvent
       group-id: notificationId
+    template:
+      default-topic: notificationTopic

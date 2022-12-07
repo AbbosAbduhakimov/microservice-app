@@ -27,16 +27,15 @@ spring:
 
 #  Kafka Properties
   kafka:
-    bootstrap-servers: localhost:9092
-    template:
-      default-topic: notificationTopic
     producer:
+      bootstrap-servers:
+        - localhost:9092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
       properties:
-        spring:
-          json-type-mapping:
-              event=uz.abbos.event.OrderPlacedEvent
+        "[spring.json.type.mapping]": event:uz.abbos.event.OrderPlacedEvent
+    template:
+      default-topic: notificationTopic
 management:
   health:
     circuit-breakers:
