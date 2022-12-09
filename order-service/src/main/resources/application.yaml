@@ -7,21 +7,16 @@ spring:
       probability: 1.0
   zipkin:
     base-url: http://localhost:9411
-
-  cloud:
-    client:
-      service-url:
-        defaultZone: http://localhost:8761/eureka
 #  Database Properties
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/order_service_db
+    url: jdbc:postgresql://localhost:5431/order_service_db
     username: postgres
     password: root
   jpa:
     show-sql: true
-    hibernate:
-      ddl-auto: update
+#    hibernate:
+#      ddl-auto: update
   application:
     name: order-service
 
@@ -81,3 +76,7 @@ resilience4j:
     instances:
       inventory:
         timeout-duration: 5s
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

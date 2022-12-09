@@ -93,14 +93,18 @@
                 <version>3.3.1</version>
                 <configuration>
                     <from>
-                        <image>openjdk:8-jre-slim-stretch</image>
+                        <image>openjdk@sha256:fb54ed3516242995d86c53346463a3509f9baf74a9178c066bdbcc5c1bdafc66</image>
                         <auth>
-                            <username>AbbosJava</username>
+                            <username>abbosjava</username>
                             <password>abbos9113</password>
                         </auth>
                     </from>
                     <to>
                         <image>registry.hub.docker.com/abbosjava/${project.artifactId}</image>
+                        <auth>
+                            <username>abbosjava</username>
+                            <password>abbos9113</password>
+                        </auth>
                     </to>
                 </configuration>
             </plugin>

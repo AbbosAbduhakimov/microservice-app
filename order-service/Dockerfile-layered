@@ -1,13 +1,13 @@
-FROM openjdk:8-jre-slim-stretch as builder
+FROM eclipse-temurin:8 as builder
 WORKDIR extracted
 ADD target/*.jar app.jar
 RUN java -Djarmode=layertools -jar app.jar extract
 
 
-FROM openjdk:8-jre-slim-stretch
+FROM eclipse-temurin:8-jre
 WORKDIR application
 COPY --from=builder extracted/dependencies/ ./
 COPY --from=builder extracted/spring-boot-loader/ ./
 COPY --from=builder extracted/snapshot-dependencies/ ./
-EXPOSE 8082
+EXPOSE 8080
 ENTRYPOINT ["java","org.springframework.boot.loader.JarLauncher"]

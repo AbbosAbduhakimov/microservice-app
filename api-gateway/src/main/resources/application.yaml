@@ -46,7 +46,11 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
-      #Logging properties
+    fetch-registry: true
+    enabled: true
+  instance:
+    hostname: localhost
+  #Logging properties
 logging:
   level:
     org.springframework.cloud.gateway.route.RouteDefinitionLocator: INFO
