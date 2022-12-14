@@ -1,1 +1,1 @@
-CREATE DATABASE IF NOT EXISTS 'inventory-service_db';
+CREATE DATABASE IF NOT EXISTS 'inventory_service_db';

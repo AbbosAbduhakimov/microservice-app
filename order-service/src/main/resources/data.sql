@@ -1,1 +1,1 @@
-CREATE DATABASE IF NOT EXISTS 'order-service_db'
+CREATE DATABASE IF NOT EXISTS 'order_service_db'

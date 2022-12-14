@@ -4,26 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="064eef11-f301-4a21-bf8c-e6a058e46433" name="Changes" comment="add docker files for dockerize the application">
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/data.sql" afterDir="false" />
+    <list default="true" id="064eef11-f301-4a21-bf8c-e6a058e46433" name="Changes" comment="fix docker-compose.yml file">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/src/main/java/uz/abbos/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ea06869-6b8d-4793-9c7e-8a6575b67780/storage_v2/_src_/database/inver_service_db.yVQ0ng/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3ea06869-6b8d-4793-9c7e-8a6575b67780/storage_v2/_src_/database/inver_service_db.yVQ0ng/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ea06869-6b8d-4793-9c7e-8a6575b67780/storage_v2/_src_/database/inver_service_db.yVQ0ng.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ea06869-6b8d-4793-9c7e-8a6575b67780/storage_v2/_src_/database/inver_service_db.yVQ0ng/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ea06869-6b8d-4793-9c7e-8a6575b67780/storage_v2/_src_/database/inver_service_db.yVQ0ng/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3ea06869-6b8d-4793-9c7e-8a6575b67780/storage_v2/_src_/database/inver_service_db.yVQ0ng/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/71714076-8cde-441f-b086-e56036169aa9/storage_v2/_src_/database/order_service_db.2QN1bQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/71714076-8cde-441f-b086-e56036169aa9/storage_v2/_src_/database/order_service_db.2QN1bQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/71714076-8cde-441f-b086-e56036169aa9/storage_v2/_src_/database/order_service_db.2QN1bQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/Dockerfile-layered" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/Dockerfile-layered" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/uz/abbos/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/uz/abbos/ApiGatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application-docker.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/Dockerfile-layered" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/Dockerfile-layered" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/java/uz/abbos/DiscoveryServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/java/uz/abbos/DiscoveryServerApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application-docker.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/Dockerfile-layered" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/Dockerfile-layered" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application-docker.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/Dockerfile-layered" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/Dockerfile-layered" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application-docker.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/Dockerfile-layered" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/Dockerfile-layered" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/OrderServiceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application-docker.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/Dockerfile-layered" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/Dockerfile-layered" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application-docker.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
@@ -85,12 +100,13 @@
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "98c17c4b26ab75412fb17629ec9ed259"
+    "spring.configuration.checksum": "e9397b1563c417628e8833f4ff2ac10b",
+    "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
-      "postgresql",
-      "mongo"
+      "mongo",
+      "postgresql"
     ]
   }
 }]]></component>
@@ -113,7 +129,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.keycloak: Compose Deployment">
+  <component name="RunManager" selected="Docker.docker-compose.yml.order-service: Compose Deployment">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="uz.abbos.ApiGatewayApplication" />
@@ -177,6 +193,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="docker-compose.yml.inventory-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -190,12 +212,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.keycloak: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.order-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="keycloak" />
+              <option value="order-service" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -203,12 +225,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.order-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.postgres-inventory: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="order-service" />
+              <option value="postgres-inventory" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -243,11 +265,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose.yml.postgres-keycloak: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml.keycloak: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.inventory-service: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml.postgres-order: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.order-service: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.postgres-inventory: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.postgres-keycloak: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.postgres-order: Compose Deployment" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.DiscoveryServerApplication" />
       <item itemvalue="Spring Boot.ProductServiceApplication" />
@@ -258,15 +280,18 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml.keycloak: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.postgres-keycloak: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.order-service: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.inventory-service: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.postgres-order: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.postgres-inventory: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.postgres-keycloak: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="064eef11-f301-4a21-bf8c-e6a058e46433" name="Changes" comment="" />
@@ -283,7 +308,10 @@
       <workItem from="1670560024129" duration="7478000" />
       <workItem from="1670568568728" duration="4291000" />
       <workItem from="1670581996013" duration="6818000" />
-      <workItem from="1670589329451" duration="7547000" />
+      <workItem from="1670589329451" duration="7963000" />
+      <workItem from="1670996229750" duration="395000" />
+      <workItem from="1670996772845" duration="11921000" />
+      <workItem from="1671011179174" duration="15909000" />
     </task>
     <task id="LOCAL-00001" summary="add zipkin and Kafka">
       <created>1670335512499</created>
@@ -306,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670423226403</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix docker-compose.yml file">
+      <created>1670597496825</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670597496825</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +362,8 @@
     <MESSAGE value="add zipkin and Kafka" />
     <MESSAGE value="configured NotificationServiceApplication" />
     <MESSAGE value="add docker files for dockerize the application" />
-    <option name="LAST_COMMIT_MESSAGE" value="add docker files for dockerize the application" />
+    <MESSAGE value="fix docker-compose.yml file" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix docker-compose.yml file" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

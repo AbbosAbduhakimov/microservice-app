@@ -1,13 +1,12 @@
-FROM eclipse-temurin:8 as builder
+FROM openjdk:8-jre as builder
 WORKDIR extracted
 ADD target/*.jar app.jar
 RUN java -Djarmode=layertools -jar app.jar extract
 
-
-FROM eclipse-temurin:8-jre
+FROM openjdk:8-jre
 WORKDIR application
 COPY --from=builder extracted/dependencies/ ./
 COPY --from=builder extracted/spring-boot-loader/ ./
 COPY --from=builder extracted/snapshot-dependencies/ ./
-EXPOSE 8080
-ENTRYPOINT ["java","org.springframework.boot.loader.JarLauncher"]
+COPY --from=builder extracted/application/ ./
+ENTRYPOINT ["java", "org.springframework.boot.loader.JarLauncher"]
