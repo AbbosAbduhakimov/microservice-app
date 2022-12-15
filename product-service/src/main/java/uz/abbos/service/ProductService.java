@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import uz.abbos.dto.ProductDto;
+import uz.abbos.dto.ResponseModel;
 import uz.abbos.model.Product;
 import uz.abbos.repository.ProductRepository;
 
@@ -28,6 +29,8 @@ public class ProductService {
                 .name(request.getName())
                 .description(request.getDescription())
                 .price(request.getPrice())
+                .isInStock(Boolean.TRUE)
+                .skuCode(request.getSkuCode())
                 .build();
 
         productRepository.save(result);
@@ -41,12 +44,30 @@ public class ProductService {
         return products.stream().map(this::mapEntityTo).collect(Collectors.toList());
     }
 
+    @Transactional(readOnly = true)
+    public List<ResponseModel> getAllBySkuCode(String ...skuCode) {
+        List<Product> products = productRepository.findAllBySkuCode(skuCode);
+        log.info("Quantities of products {}",products.size());
+        return products.stream().map(this::mapEntityToResponse).collect(Collectors.toList());
+    }
+
     private ProductDto mapEntityTo(Product product) {
         return ProductDto
                 .builder()
                 .name(product.getName())
                 .description(product.getDescription())
                 .price(product.getPrice())
+                .skuCode(product.getSkuCode())
+                .isInStock(product.getIsInStock())
+                .quantity(product.getQuantity())
+                .build();
+    }
+
+    private ResponseModel mapEntityToResponse(Product product) {
+        return ResponseModel
+                .builder()
+                .skuCode(product.getSkuCode())
+                .isInStock(product.getIsInStock())
                 .build();
     }
 }
