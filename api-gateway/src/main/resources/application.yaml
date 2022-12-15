@@ -10,10 +10,11 @@ spring:
     oauth2:
       resource-server:
         jwt:
-          issuer-uri: http://localhost:8080/realms/microservice-app
+          issuer-uri: http://localhost:8989/realms/microservice-app
   cloud:
     gateway:
       routes:
+
         - id: product-service
           uri: lb://product-service
           predicates:
@@ -53,6 +54,7 @@ eureka:
     enabled: true
   instance:
     hostname: localhost
+    prefer-ip-address: true
   #Logging properties
 logging:
   level:

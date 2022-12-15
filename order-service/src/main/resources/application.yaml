@@ -15,8 +15,8 @@ spring:
     password: root
   jpa:
     show-sql: true
-#    hibernate:
-#      ddl-auto: update
+    hibernate:
+      ddl-auto: create-drop
   application:
     name: order-service
 
