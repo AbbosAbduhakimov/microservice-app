@@ -10,7 +10,7 @@ spring:
     oauth2:
       resource-server:
         jwt:
-          issuer-uri: http://localhost:8989/realms/microservice-app
+          issuer-uri: http://localhost:8080/realms/microservice-app
   cloud:
     gateway:
       routes:
@@ -49,9 +49,8 @@ spring:
 eureka:
   client:
     service-url:
+#      defaultZone: http://eureka:password@discovery-server:8761/eureka
       defaultZone: http://eureka:password@localhost:8761/eureka
-    fetch-registry: true
-    enabled: true
   instance:
     hostname: localhost
     prefer-ip-address: true

@@ -4,6 +4,10 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/mongo_db
+      database: product
+  datasource:
+    driver-class-name:
+
 eureka:
   client:
     service-url:

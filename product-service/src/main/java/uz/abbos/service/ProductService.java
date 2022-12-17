@@ -45,8 +45,8 @@ public class ProductService {
     }
 
     @Transactional(readOnly = true)
-    public List<ResponseModel> getAllBySkuCode(String ...skuCode) {
-        List<Product> products = productRepository.findAllBySkuCode(skuCode);
+    public List<ResponseModel> getAllBySkuCode(List<String> skuCodes) {
+        List<Product> products = productRepository.findBySkuCodeIn(skuCodes);
         log.info("Quantities of products {}",products.size());
         return products.stream().map(this::mapEntityToResponse).collect(Collectors.toList());
     }

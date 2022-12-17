@@ -36,7 +36,7 @@ public class ProductController {
     }
 
     @GetMapping("/feign")
-    public List<ResponseModel> getAllBySkuCode(@RequestParam("sku-code") String ...skuCode){
+    public List<ResponseModel> getAllBySkuCode(@RequestParam("code") List<String> skuCode){
         return productService.getAllBySkuCode(skuCode);
     }
 }

@@ -5,56 +5,59 @@ services:
     container_name: postgres-order
     image: postgres:latest
     environment:
-      POSTGRES_DB: order_service_db
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: root
       PGDATA: /data/postgres
-        - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-order:5431/order_service_db
     volumes:
-       - ./postgres-order:/data/postgres
+       - ./docker-postgresql-initdb.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
     expose:
-      - "5431"
+      - "5432"
     ports:
-      - "5431:5431"
-    command: -p 5431
+      - "5431:5432"
     restart: always
+    networks:
+      - microservice
 
   #   Order-service compose config
-  postgres-inventory:
-    container_name: postgres-inventory
-    image: postgres:latest
-    environment:
-      POSTGRES_DB: inver_service_db
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: root
-      DB_PORT: 5432
-      PGDATA: /data/postgres
-        - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-inventory:5432/inver_service_db
-    volumes:
-      - ./postgres-inventory:/data/postgres
-    ports:
-      - "5432:5432"
-    restart: always
+#  postgres-inventory:
+#    container_name: postgres-inventory
+#    image: postgres:latest
+#    environment:
+#      POSTGRES_DB: inver_service_db
+#      POSTGRES_USER: postgres
+#      POSTGRES_PASSWORD: root
+#      PGDATA: /data/postgres
+##        - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-inventory:5432/inver_service_db
+#    volumes:
+#      - ./postgres-inventory:/data/postgres
+#      - ./docker-postgresql-initdb.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
+#    ports:
+#      - "5432:5432"
+#    restart: always
+#    networks:
+#      - microservice
 
   #    Mongo compose config
   mongo:
     container_name: mongo
-    image: mongo:latest
-    restart: always
+    image: mongo:4.4.2
+    restart: unless-stopped
     ports:
       - "27017:27017"
     expose:
       - "27017"
     volumes:
       - ./mongo-data:/data/db
+    networks:
+      - microservice
 
 
-  #    Keycloak compose config
+#      Keycloak compose config
   postgres-keycloak:
     container_name: keycloak-postgres
     image: postgres:latest
     volumes:
-      - ./postgres-keycloak:/data/postgres
+      - ./psql_keycloak_data:/var/lib/psql
     environment:
       POSTGRES_DB: keycloak_db
       POSTGRES_USER: postgres
@@ -66,11 +69,15 @@ services:
     ports:
       - "5430:5430"
     command: -p 5430
+    networks:
+      - microservice
 
   keycloak:
     container_name: keycloak
-    image: quay.io/keycloak/keycloak:18.0.2
-    command: [ "start-dev", "--import-realm" ]
+    image: quay.io/keycloak/keycloak:18.0.0
+    command:
+        - "start-dev"
+        - "--import-realm"
     environment:
       DB_DATABASE: keycloak_db
       DB_PORT: 5430
@@ -82,15 +89,21 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./postgres-keycloak:/data/postgres
+      - ./realms/:/opt/keycloak/data/import/
     depends_on:
       - postgres-keycloak
+    networks:
+      - microservice
   zookeeper:
     image: confluentinc/cp-zookeeper:7.3.0
     container_name: zookeeper
+    ports:
+      - "2181:2181"
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
       ZOOKEEPER_TICK_TIME: 2000
+    networks:
+      - microservice
 
   broker:
     image: confluentinc/cp-kafka:7.3.0
@@ -107,34 +120,39 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+    networks:
+      - microservice
+
   zipkin:
     image: openzipkin/zipkin
     container_name: zipkin
-    environment:
-      COLLECTOR_ZIPKIN_HTTP_PORT: 9411
     ports:
       - "9411:9411"
+    networks:
+      - microservice
 
   #   Eureka Server compose config
   discovery-server:
-    image: abbosjava/discovery-server:latest
+    image: discovery-server:1.0-SNAPSHOT
     container_name: discovery-server
     hostname: discovery-server
-    pull_policy: always
+#    pull_policy: always
     ports:
       - "8761:8761"
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:
       - zipkin
+    networks:
+      - microservice
 
   #   api gateway  compose config
   api-gateway:
-    image: abbosjava/api-gateway:latest
+    image: api-gateway:1.0-SNAPSHOT
     container_name: api-gateway
-    pull_policy: always
+#    pull_policy: always
     ports:
-      - "8181:8181"
+      - "8181:8080"
     expose:
       - "8181"
     environment:
@@ -144,29 +162,33 @@ services:
       - zipkin
       - discovery-server
       - keycloak
+    networks:
+      - microservice
 
     # Product-Service compose config
   product-service:
     container_name: product-service
-    image: abbosjava/product-service:latest
-    pull_policy: always
+    image: product-service:1.0-SNAPSHOT
+#    pull_policy: always
     environment:
       - SPRING_PROFILES_ACTIVE=docker
-    ports:
-      - "8081:8081"
+#    ports:
+#      - "8081:8081"
     depends_on:
       - mongo
       - discovery-server
       - api-gateway
+    networks:
+      - microservice
 
     # Order-Service compose config
   order-service:
     container_name: order-service
-    pull_policy: always
-    image: abbosjava/order-service:latest
+#    pull_policy: always
+    image: order-service:1.0-SNAPSHOT
     environment:
       - SPRING_PROFILES_ACTIVE=docker
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-order:5431/order_service_db
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-order:5432/order_service_db
     ports:
       - "8083:8083"
     depends_on:
@@ -175,27 +197,31 @@ services:
       - zipkin
       - discovery-server
       - api-gateway
+    networks:
+      - microservice
 
   # Inventory-Service Docker Compose Config
   inventory-service:
     container_name: inventory-service
-    pull_policy: always
-    image: abbosjava/inventory-service:latest
+#    pull_policy: always
+    image: inventory-service:1.0-SNAPSHOT
     environment:
       - SPRING_PROFILES_ACTIVE=docker
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-inventory:5432/inver_service_db
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-order:5432/inver_service_db
     ports:
       - "8082:8082"
     depends_on:
-      - postgres-inventory
+      - postgres-order
       - discovery-server
       - api-gateway
+    networks:
+      - microservice
 
     # Notification-Service Docker Compose Config
   notification-service:
     container_name: notification-service
-    pull_policy: always
-    image: abbosjava/notification-service:latest
+#    pull_policy: always
+    image: notification-service:1.0-SNAPSHOT
     environment:
       - SPRING_PROFILES_ACTIVE=docker
     depends_on:
@@ -203,3 +229,8 @@ services:
       - broker
       - discovery-server
       - api-gateway
+    networks:
+      - microservice
+networks:
+  microservice:
+    name: microservice
