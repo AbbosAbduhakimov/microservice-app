@@ -4,40 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="064eef11-f301-4a21-bf8c-e6a058e46433" name="Changes" comment="fixed bugs and refactoring">
-      <change afterPath="$PROJECT_DIR$/docker-postgresql-initdb.sql" afterDir="false" />
+    <list default="true" id="064eef11-f301-4a21-bf8c-e6a058e46433" name="Changes" comment="refactoring">
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/uz/abbos/config/KeyCloakConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/uz/abbos/config/KeycloakGrantedAuthoritiesConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/uz/abbos/config/ReactiveKeycloakJwtAuthenticationConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-postgresql-initdb2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-postgresql-initdb3.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/Dockerfile-layered" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/Dockerfile-layered" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/uz/abbos/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/uz/abbos/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application-docker.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/Dockerfile-layered" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/Dockerfile-layered" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application-docker.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/Dockerfile-layered" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/Dockerfile-layered" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-postgresql-initdb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/docker-postgresql-initdb.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application-docker.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/Dockerfile-layered" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/Dockerfile-layered" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/data.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application-docker.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/Dockerfile-layered" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/Dockerfile-layered" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/controller/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application-docker.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/Dockerfile-layered" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/Dockerfile-layered" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/ProductServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/ProductServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/model/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application-docker.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/test/java/uz/abbos/ProductServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/test/java/uz/abbos/ProductServiceApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/realms/realm-export.json" beforeDir="false" afterPath="$PROJECT_DIR$/realms/realm-export.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,41 +74,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8 (3)&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/USER/IdeaProjects/microservice-app/realms&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;e9397b1563c417628e8833f4ff2ac10b&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "1.8 (3)",
+    "last_opened_file_path": "C:/Users/USER/IdeaProjects/microservice-app/realms",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "spring.configuration.checksum": "e9397b1563c417628e8833f4ff2ac10b",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mongo&quot;,
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo",
+      "postgresql"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
-      &quot;PostgreSQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+      "PostgreSQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -138,7 +131,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.postgres-order: Compose Deployment">
+  <component name="RunManager" selected="Docker.docker-compose.yml.keycloak: Compose Deployment">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="uz.abbos.ApiGatewayApplication" />
@@ -208,25 +201,20 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="docker-compose.yml.api-gateway: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
               <option value="api-gateway" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="docker-compose.yml.broker: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="broker" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -247,12 +235,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.postgres-inventory: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.order-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="postgres-inventory" />
+              <option value="order-service" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -260,12 +248,12 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.postgres-order: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="docker-compose.yml.postgres-keycloak: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="postgres-order" />
+              <option value="postgres-keycloak" />
             </list>
           </option>
           <option name="sourceFilePath" value="docker-compose.yml" />
@@ -274,10 +262,10 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose.yml.postgres-order: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.order-service: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.postgres-keycloak: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.api-gateway: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml.broker: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml.postgres-inventory: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.keycloak: Compose Deployment" />
       <item itemvalue="Spring Boot.OrderServiceApplication" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
@@ -289,11 +277,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml.postgres-order: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.postgres-inventory: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.api-gateway: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.keycloak: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.broker: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.order-service: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.postgres-keycloak: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.api-gateway: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -323,7 +311,9 @@
       <workItem from="1671011179174" duration="16077000" />
       <workItem from="1671027936355" duration="54103000" />
       <workItem from="1671254999754" duration="12419000" />
-      <workItem from="1671270455712" duration="11031000" />
+      <workItem from="1671270455712" duration="11519000" />
+      <workItem from="1671425066918" duration="478000" />
+      <workItem from="1671425555514" duration="51562000" />
     </task>
     <task id="LOCAL-00001" summary="add zipkin and Kafka">
       <created>1670335512499</created>
@@ -374,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671116570700</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="refactoring">
+      <created>1671284749288</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1671284749288</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,23 +396,10 @@
     <MESSAGE value="bug fix and refactoring" />
     <MESSAGE value="add FeignClient" />
     <MESSAGE value="fixed bugs and refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bugs and refactoring" />
+    <MESSAGE value="refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/src/main/java/uz/abbos/service/OrderService.java</url>
-          <line>59</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/controller/InventoryController.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.apache.kafka.clients.consumer.ConsumerRecord" memberName="serializedKeySize" />

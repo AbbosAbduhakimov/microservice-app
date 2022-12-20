@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.math.BigDecimal;
 
-@Document
+@Document("product")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter @Setter
@@ -21,7 +21,6 @@ public class Product {
     private BigDecimal price;
     private String skuCode;
     private Integer quantity;
-    @Field
     private Boolean isInStock = Boolean.FALSE;
 
 }

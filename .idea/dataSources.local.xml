@@ -16,7 +16,7 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="mongo_db@localhost" uuid="6c346629-1135-4ed5-8278-6310a1131e9d">
+    <data-source name="product_db@localhost" uuid="6c346629-1135-4ed5-8278-6310a1131e9d">
       <database-info product="Mongo DB" version="5.0.14" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.17" dbms="MONGO" exact-version="5.0.14" exact-driver-version="1.17" />
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <secret-storage>master_key</secret-storage>

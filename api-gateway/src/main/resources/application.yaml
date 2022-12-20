@@ -11,6 +11,9 @@ spring:
       resource-server:
         jwt:
           issuer-uri: http://localhost:8080/realms/microservice-app
+          jwk-set-uri: http://keycloak:8080/realms/microservice-app/protocol/openid-connect/certs
+          keycloak:
+             client-id: cloud-client
   cloud:
     gateway:
       routes:
@@ -24,8 +27,8 @@ spring:
         - id: order-service
           uri: lb://order-service
           predicates:
-            - Path=/order
-            - Method=POST
+            - Path=/order/**
+            - Method=POST,GET
 
         - id: inventory-service
           uri: lb://inventory-service
