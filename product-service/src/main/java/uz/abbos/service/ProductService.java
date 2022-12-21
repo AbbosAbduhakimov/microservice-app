@@ -1,11 +1,14 @@
 package uz.abbos.service;
 
+import com.common.commonlibrary.CustomResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import uz.abbos.dto.ProductDto;
 import uz.abbos.dto.ResponseModel;
+import uz.abbos.exceptions.ApplicationException;
 import uz.abbos.model.Product;
 import uz.abbos.repository.ProductRepository;
 
@@ -15,6 +18,7 @@ import java.util.stream.Collectors;
 @Service
 @Slf4j
 @Transactional
+@FeignClient("product-service")
 public class ProductService {
     private final ProductRepository productRepository;
 
@@ -38,7 +42,7 @@ public class ProductService {
     }
 
     @Transactional(readOnly = true)
-    public List<ProductDto> getAll() {
+    public List<ProductDto> getAllProductList() {
         List<Product> products = productRepository.findAll();
         log.info("Quantities of products {}",products.size());
         return products.stream().map(this::mapEntityTo).collect(Collectors.toList());
@@ -46,7 +50,12 @@ public class ProductService {
 
     @Transactional(readOnly = true)
     public List<ResponseModel> getAllBySkuCode(List<String> skuCodes) {
-        List<Product> products = productRepository.findBySkuCodeIn(skuCodes);
+        List<Product> products = productRepository.findBySkuCodeIn(skuCodes)
+                .stream().filter(product -> product.getIsInStock() != Boolean.FALSE).collect(Collectors.toList());
+        if (products.isEmpty()){
+            log.warn("Product list is empty");
+            throw new ApplicationException("Some product is not available");
+        }
         log.info("Quantities of products {}",products.size());
         return products.stream().map(this::mapEntityToResponse).collect(Collectors.toList());
     }

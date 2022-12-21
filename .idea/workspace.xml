@@ -4,34 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="064eef11-f301-4a21-bf8c-e6a058e46433" name="Changes" comment="refactoring">
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/uz/abbos/config/KeyCloakConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/uz/abbos/config/KeycloakGrantedAuthoritiesConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/uz/abbos/config/ReactiveKeycloakJwtAuthenticationConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-postgresql-initdb2.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-postgresql-initdb3.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventory-service/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="064eef11-f301-4a21-bf8c-e6a058e46433" name="Changes" comment="fixed critical bug and some refactoring">
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/exceptions/ApplicationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/exceptions/GlobalException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/service/LoadBalancerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/exceptions/ApplicationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/exceptions/GlobalException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/uz/abbos/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/uz/abbos/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application-docker.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application-docker.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-postgresql-initdb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/docker-postgresql-initdb.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application-docker.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/InventoryServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/InventoryServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/controller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/controller/InventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/dto/ResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/dto/ResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/service/ProductClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/service/ProductClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/data.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application-docker.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application-docker.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application-docker.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/exceptions/ExceptionFromInventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/exceptions/ExceptionFromInventoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/ProductServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/ProductServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/dto/ResponseModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/dto/ResponseModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realms/realm-export.json" beforeDir="false" afterPath="$PROJECT_DIR$/realms/realm-export.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +80,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "1.8 (3)",
-    "last_opened_file_path": "C:/Users/USER/IdeaProjects/microservice-app/realms",
+    "last_opened_file_path": "C:/Users/USER/IdeaProjects/microservice-app/inventory-service/src/main/java/uz/abbos",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -117,11 +112,11 @@
       <recent name="uz.abbos.model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\IdeaProjects\microservice-app\inventory-service\src\main\java\uz\abbos" />
+      <recent name="C:\Users\USER\IdeaProjects\microservice-app\product-service\src\main\java\uz\abbos" />
       <recent name="C:\Users\USER\IdeaProjects\microservice-app\realms" />
       <recent name="C:\Users\USER\IdeaProjects\microservice-app\realm" />
       <recent name="C:\Users\USER\IdeaProjects\microservice-app\product-service" />
-      <recent name="C:\Users\USER\IdeaProjects\microservice-app\order-service" />
-      <recent name="C:\Users\USER\IdeaProjects\microservice-app\inventory-service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -313,7 +308,7 @@
       <workItem from="1671254999754" duration="12419000" />
       <workItem from="1671270455712" duration="11519000" />
       <workItem from="1671425066918" duration="478000" />
-      <workItem from="1671425555514" duration="51562000" />
+      <workItem from="1671425555514" duration="83982000" />
     </task>
     <task id="LOCAL-00001" summary="add zipkin and Kafka">
       <created>1670335512499</created>
@@ -371,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671284749288</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed critical bug and some refactoring">
+      <created>1671543112379</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671543112379</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +399,8 @@
     <MESSAGE value="add FeignClient" />
     <MESSAGE value="fixed bugs and refactoring" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="fixed critical bug and some refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed critical bug and some refactoring" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

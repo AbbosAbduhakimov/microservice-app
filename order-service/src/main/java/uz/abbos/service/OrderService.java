@@ -23,19 +23,20 @@ import java.util.stream.Collectors;
 @Service
 @Slf4j
 @Transactional
-public class OrderService  {
+public class OrderService {
 
     private final OrderRepository orderRepository;
     private final WebClient.Builder webClientBuilder;
-    private final KafkaTemplate<String,OrderPlacedEvent> kafkaTemplate;
+    private final KafkaTemplate<String, OrderPlacedEvent> kafkaTemplate;
 
     @Autowired
     public OrderService(OrderRepository orderRepository, WebClient.Builder webClientBuilder,
-                        KafkaTemplate<String,OrderPlacedEvent> kafkaTemplate) {
+                        KafkaTemplate<String, OrderPlacedEvent> kafkaTemplate) {
         this.orderRepository = orderRepository;
         this.webClientBuilder = webClientBuilder;
         this.kafkaTemplate = kafkaTemplate;
     }
+
     public String createOrder(OrderDto request) {
         Order order = new Order();
         order.setOrderNumber(UUID.randomUUID().toString());
@@ -48,21 +49,12 @@ public class OrderService  {
                 .map(OrderItems::getSkuCode)
                 .collect(Collectors.toList());
 
-
-        //  call InventoryService,and place order if products is in stock
-//        InventoryResponse[] inventoryResponsesArray =
-//                webClientBuilder.build().get()
-//                .uri("http://inventory-service/inver/feign",uriBuilder -> uriBuilder.queryParam("sku-code",skuCodes).build())
-//                .retrieve()
-//                .bodyToMono(InventoryResponse[].class)
-//                .block();
-
         InventoryResponse[] inventoryResponsesArray =
                 webClientBuilder.build().get()
-                .uri("http://inventory-service/inver/feign",uriBuilder -> uriBuilder.queryParam("code",skuCodes).build())
-                .retrieve()
-                .bodyToMono(InventoryResponse[].class)
-                .block();
+                        .uri("http://inventory-service/inver/feign", uriBuilder -> uriBuilder.queryParam("sku-code", skuCodes).build())
+                        .retrieve()
+                        .bodyToMono(InventoryResponse[].class)
+                        .block();
 
         if (inventoryResponsesArray == null) {
             log.warn("Order failed");
@@ -73,11 +65,10 @@ public class OrderService  {
 
         if (result) {
             orderRepository.save(order);
-            kafkaTemplate.send("notificationTopic","orderKey",new OrderPlacedEvent(order.getOrderNumber()));
+            kafkaTemplate.send("notificationTopic", "orderKey", new OrderPlacedEvent(order.getOrderNumber()));
             log.info("Order {} is saved", order.getId());
             return "Created Order";
-        }
-        else {
+        } else {
             log.warn("Order failed");
             throw new ExceptionFromInventoryService("Some product is not in stock please choose another product");
         }
@@ -85,7 +76,6 @@ public class OrderService  {
 
     private OrderItems mapEntityTo(OrderChildDto childModel) {
         OrderItems orderItems = new OrderItems();
-
         orderItems.setSkuCode(childModel.getSkuCode());
         orderItems.setPrice(childModel.getPrice());
         orderItems.setQuantity(childModel.getQuantity());

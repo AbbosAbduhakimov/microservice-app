@@ -21,5 +21,14 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka:password@localhost:8761/eureka
-    enabled: true
-    fetch-registry: false
+  instance:
+    hostname: localhost
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: full
+        decode404: true

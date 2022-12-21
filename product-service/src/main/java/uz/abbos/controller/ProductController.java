@@ -24,19 +24,19 @@ public class ProductController {
 
 
     @PostMapping
-    public ResponseEntity<Void> create(@RequestBody ProductDto request){
-         productService.createProduct(request);
-         return ResponseEntity.status(HttpStatus.CREATED).build();
+    public ResponseEntity<Void> create(@RequestBody ProductDto request) {
+        productService.createProduct(request);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
 
     @GetMapping
-    public ResponseEntity<List<ProductDto>> getAll(){
-        return ResponseEntity.ok(productService.getAll());
+    public ResponseEntity<List<ProductDto>> getAll() {
+        return ResponseEntity.ok(productService.getAllProductList());
     }
 
     @GetMapping("/feign")
-    public List<ResponseModel> getAllBySkuCode(@RequestParam("code") List<String> skuCode){
-        return productService.getAllBySkuCode(skuCode);
+    public ResponseEntity<List<ResponseModel>> getAllBySkuCode(@RequestParam("sku-code") List<String> skuCode) {
+        return new ResponseEntity<>(productService.getAllBySkuCode(skuCode),HttpStatus.OK);
     }
 }

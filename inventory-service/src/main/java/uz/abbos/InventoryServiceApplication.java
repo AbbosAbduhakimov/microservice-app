@@ -1,12 +1,8 @@
 package uz.abbos;
 
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.context.annotation.Bean;
-import uz.abbos.model.Inventory;
-import uz.abbos.repository.InventoryRepository;
 
 @SpringBootApplication
 @EnableFeignClients
@@ -15,8 +11,6 @@ public class InventoryServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(InventoryServiceApplication.class, args);
     }
-
-
 
 //    @Bean
 //    public CommandLineRunner loadData(InventoryRepository inventoryRepository) {
