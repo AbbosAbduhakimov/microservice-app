@@ -246,3 +246,4 @@ services:
 networks:
   microservice:
     name: microservice
+    driver: bridge

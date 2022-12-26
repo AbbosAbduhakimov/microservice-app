@@ -7,7 +7,8 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Getter @Setter
+@Getter
+@Setter
 public class OrderItems {
 
     @Id
@@ -20,6 +21,7 @@ public class OrderItems {
 
     private Integer quantity;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "order_id")
     private Order order;
 }

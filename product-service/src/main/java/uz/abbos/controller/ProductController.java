@@ -1,11 +1,11 @@
 package uz.abbos.controller;
 
+import com.common.commonlibrary.CustomResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import uz.abbos.dto.ProductDto;
-import uz.abbos.dto.ResponseModel;
 import uz.abbos.service.ProductService;
 
 import java.util.List;
@@ -35,8 +35,16 @@ public class ProductController {
         return ResponseEntity.ok(productService.getAllProductList());
     }
 
-    @GetMapping("/feign")
-    public ResponseEntity<List<ResponseModel>> getAllBySkuCode(@RequestParam("sku-code") List<String> skuCode) {
-        return new ResponseEntity<>(productService.getAllBySkuCode(skuCode),HttpStatus.OK);
+    @GetMapping( "/feign")
+    public ResponseEntity<List<CustomResponse>> getAllBySkuCode(@RequestParam("skuCodes") List<String> skuCode) {
+        for (String s : skuCode) {
+            System.out.println("skucodes " + s);
+        }
+        return new ResponseEntity<>(productService.getAllBySkuCode(skuCode), HttpStatus.OK);
+    }
+
+    @GetMapping("/test")
+    public String test(){
+        return "test success";
     }
 }

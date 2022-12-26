@@ -38,9 +38,17 @@ public class ProductServiceApplication {
             secondData.setIsInStock(Boolean.TRUE);
             secondData.setQuantity(120);
 
+            Product data = new Product();
+            data.setName("iPhone 12");
+            data.setDescription("some text");
+            data.setPrice(BigDecimal.valueOf(1500.0));
+            data.setSkuCode("phone_blue");
+            data.setIsInStock(Boolean.TRUE);
+            data.setQuantity(120);
 
             productRepository.save(firstData);
             productRepository.save(secondData);
+            productRepository.save(data);
         };
     }
 

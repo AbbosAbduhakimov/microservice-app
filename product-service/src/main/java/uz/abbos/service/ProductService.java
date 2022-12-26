@@ -7,11 +7,11 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import uz.abbos.dto.ProductDto;
-import uz.abbos.dto.ResponseModel;
 import uz.abbos.exceptions.ApplicationException;
 import uz.abbos.model.Product;
 import uz.abbos.repository.ProductRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -44,19 +44,19 @@ public class ProductService {
     @Transactional(readOnly = true)
     public List<ProductDto> getAllProductList() {
         List<Product> products = productRepository.findAll();
-        log.info("Quantities of products {}",products.size());
+        log.info("Quantities of products {}", products.size());
         return products.stream().map(this::mapEntityTo).collect(Collectors.toList());
     }
 
     @Transactional(readOnly = true)
-    public List<ResponseModel> getAllBySkuCode(List<String> skuCodes) {
-        List<Product> products = productRepository.findBySkuCodeIn(skuCodes)
-                .stream().filter(product -> product.getIsInStock() != Boolean.FALSE).collect(Collectors.toList());
-        if (products.isEmpty()){
+    public List<CustomResponse> getAllBySkuCode(List<String> skuCodes) {
+        System.out.println(skuCodes);
+        List<Product> products = productRepository.findBySkuCodeIn(skuCodes);
+        if (products.isEmpty()) {
             log.warn("Product list is empty");
-            throw new ApplicationException("Some product is not available");
+            throw new ApplicationException("Products is not available");
         }
-        log.info("Quantities of products {}",products.size());
+        log.info("Quantities of products {}", products.size());
         return products.stream().map(this::mapEntityToResponse).collect(Collectors.toList());
     }
 
@@ -72,11 +72,7 @@ public class ProductService {
                 .build();
     }
 
-    private ResponseModel mapEntityToResponse(Product product) {
-        return ResponseModel
-                .builder()
-                .skuCode(product.getSkuCode())
-                .isInStock(product.getIsInStock())
-                .build();
+    private CustomResponse mapEntityToResponse(Product product) {
+        return new CustomResponse(product.getSkuCode(), product.getIsInStock());
     }
 }

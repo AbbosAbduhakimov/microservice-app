@@ -6,10 +6,11 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import uz.abbos.dto.InventoryResponse;
-import uz.abbos.dto.OrderChildDto;
 import uz.abbos.dto.OrderDto;
 import uz.abbos.event.OrderPlacedEvent;
 import uz.abbos.exceptions.ExceptionFromInventoryService;
+import uz.abbos.mapper.OrderItemsMapper;
+import uz.abbos.mapper.OrderMapper;
 import uz.abbos.model.Order;
 import uz.abbos.model.OrderItems;
 import uz.abbos.repository.OrderRepository;
@@ -28,30 +29,37 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final WebClient.Builder webClientBuilder;
     private final KafkaTemplate<String, OrderPlacedEvent> kafkaTemplate;
+    private final OrderItemsMapper orderItemsMapper;
+    private final OrderMapper orderMapper;
 
     @Autowired
     public OrderService(OrderRepository orderRepository, WebClient.Builder webClientBuilder,
-                        KafkaTemplate<String, OrderPlacedEvent> kafkaTemplate) {
+                        KafkaTemplate<String, OrderPlacedEvent> kafkaTemplate, OrderItemsMapper orderItemsMapper, OrderMapper orderMapper) {
         this.orderRepository = orderRepository;
         this.webClientBuilder = webClientBuilder;
         this.kafkaTemplate = kafkaTemplate;
+        this.orderItemsMapper = orderItemsMapper;
+        this.orderMapper = orderMapper;
     }
 
     public String createOrder(OrderDto request) {
         Order order = new Order();
         order.setOrderNumber(UUID.randomUUID().toString());
-
         List<OrderItems> orderItems = request.getOrderItems()
-                .stream().map(this::mapEntityTo).collect(Collectors.toList());
-        order.setOrderItems(orderItems);
+                .stream().map(orderItemsMapper::orderItemToEntity).collect(Collectors.toList());
 
-        List<String> skuCodes = order.getOrderItems().stream()
+        List<String> skuCodes = orderItems.stream()
                 .map(OrderItems::getSkuCode)
                 .collect(Collectors.toList());
+        orderItems.forEach(orderItem -> {
+            order.setOrderItems(orderItems);
+            orderItem.setOrder(order);
+        });
 
         InventoryResponse[] inventoryResponsesArray =
                 webClientBuilder.build().get()
-                        .uri("http://inventory-service/inver/feign", uriBuilder -> uriBuilder.queryParam("sku-code", skuCodes).build())
+                        .uri("http://inventory-service/inver/feign",
+                                uriBuilder -> uriBuilder.queryParam("skuCodes", skuCodes).build())
                         .retrieve()
                         .bodyToMono(InventoryResponse[].class)
                         .block();
@@ -65,7 +73,7 @@ public class OrderService {
 
         if (result) {
             orderRepository.save(order);
-            kafkaTemplate.send("notificationTopic", "orderKey", new OrderPlacedEvent(order.getOrderNumber()));
+//            kafkaTemplate.send("notificationTopic", "orderKey", new OrderPlacedEvent(order.getOrderNumber()));
             log.info("Order {} is saved", order.getId());
             return "Created Order";
         } else {
@@ -74,12 +82,7 @@ public class OrderService {
         }
     }
 
-    private OrderItems mapEntityTo(OrderChildDto childModel) {
-        OrderItems orderItems = new OrderItems();
-        orderItems.setSkuCode(childModel.getSkuCode());
-        orderItems.setPrice(childModel.getPrice());
-        orderItems.setQuantity(childModel.getQuantity());
-        return orderItems;
+    public List<OrderDto> getAllOrder() {
+        return orderRepository.findAll().stream().map(orderMapper::orderToDto).collect(Collectors.toList());
     }
-
 }

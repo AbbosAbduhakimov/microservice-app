@@ -66,18 +66,17 @@ resilience4j:
         exponential-max-wait-duration-in-open-state: 5s
 
 #       Resilience4j Retry properties
-  retry:
-    instances:
-      inventory:
-        enable-exponential-backoff: true
-        max-attempts: 5
-        wait-duration: 5s
-  time-limiter:
-    instances:
-      inventory:
-        timeout-duration: 5s
+#  retry:
+#    instances:
+#      inventory:
+#        enable-exponential-backoff: true
+#        max-attempts: 5
+#        wait-duration: 5s
+#  time-limiter:
+#    instances:
+#      inventory:
+#        timeout-duration: 5s
 eureka:
   client:
     service-url:
-#      defaultZone: http://eureka:password@discovery-server:8761/eureka
       defaultZone: http://eureka:password@localhost:8761/eureka

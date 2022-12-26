@@ -2,7 +2,9 @@ server:
   port: 8761
 eureka:
   instance:
-    hostname: localhost
+    prefer-ip-address: true
+  #  instance:
+#    hostname: localhost
   server:
     enable-self-preservation: true
     wait-time-in-ms-when-sync-empty: 0

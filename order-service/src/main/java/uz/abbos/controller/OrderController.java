@@ -10,6 +10,8 @@ import uz.abbos.dto.OrderDto;
 import uz.abbos.exceptions.ExceptionFromInventoryService;
 import uz.abbos.service.OrderService;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/order")
 @Slf4j
@@ -44,5 +46,9 @@ public class OrderController {
     public ResponseEntity<String> fallbackMethod(OrderDto orderDto, RuntimeException exception) {
         log.error("Inside circuit breaker fallbackMethod, cause - {}", exception.toString());
         return new ResponseEntity<>(exception.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+    @GetMapping
+    public ResponseEntity<List<OrderDto>> getAll(){
+        return ResponseEntity.ok(orderService.getAllOrder());
     }
 }

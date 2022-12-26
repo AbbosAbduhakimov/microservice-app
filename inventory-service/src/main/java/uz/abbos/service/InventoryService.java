@@ -20,7 +20,7 @@ public class InventoryService {
         this.inventoryRepository = inventoryRepository;
     }
 
-    public List<ResponseModel> isInStock(String... skuCode) {
+    public List<ResponseModel> isInStock(String skuCode) {
         List<ResponseModel> result = inventoryRepository.findInventoriesBySkuCodeIn(skuCode)
                 .stream().map(inventory -> ResponseModel.builder()
                         .skuCode(inventory.getSkuCode())
