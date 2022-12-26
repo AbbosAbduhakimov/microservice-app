@@ -1,13 +1,26 @@
 server:
   port: 8181
+  ssl:
+    enabled: false
 spring:
+  cloud:
+    gateway:
+      httpclient:
+        ssl:
+          useInsecureTrustManager: false
   zipkin:
-    base-url: http://localhost:9411
+    base-url: http://zipkin:9411
+  sleuth:
+    sampler:
+      probability: 1.0
   security:
     oauth2:
       resource-server:
         jwt:
-          issuer-uri: http://localhost:8080/realms/microservice-app
+          issuer-uri: http://keycloak:8080/realms/microservice-app
+          jwk-set-uri: http://keycloak:8080/realms/microservice-app/protocol/openid-connect/certs
+        keycloak:
+          client-id: cloud-client
 eureka:
   client:
     service-url:

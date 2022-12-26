@@ -6,8 +6,9 @@ import lombok.Setter;
 import java.math.BigDecimal;
 
 @Getter @Setter
-public class OrderChildDto {
+public class OrderItemsDto {
 
+    private Long id;
     private String skuCode;
 
     private BigDecimal price;
