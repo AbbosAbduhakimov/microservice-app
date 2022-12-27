@@ -1,9 +1,9 @@
 package uz.abbos;
 
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import uz.abbos.model.Product;
 import uz.abbos.repository.ProductRepository;
@@ -11,13 +11,16 @@ import uz.abbos.repository.ProductRepository;
 import java.math.BigDecimal;
 
 @SpringBootApplication
-@EnableEurekaClient
 public class ProductServiceApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ProductServiceApplication.class, args);
     }
 
+    @Bean
+    ApplicationRunner runner() {
+        return args -> System.getenv().forEach((k, v) -> System.out.println(k + "=" + v));
+    }
 
     @Bean
     public CommandLineRunner loadData(ProductRepository productRepository) {

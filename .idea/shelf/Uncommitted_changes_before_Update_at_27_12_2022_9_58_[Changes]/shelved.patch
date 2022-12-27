@@ -1,0 +1,391 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"064eef11-f301-4a21-bf8c-e6a058e46433\" name=\"Changes\" comment=\"bug fix and refactoring\">\r\n      <change afterPath=\"$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/model/ProductDto.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/service/ProductClient.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/product-service/src/main/java/uz/abbos/dto/ResponseModel.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/realms/realm-export.json\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/api-gateway/src/main/java/uz/abbos/ApiGatewayApplication.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/api-gateway/src/main/java/uz/abbos/ApiGatewayApplication.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/discovery-server/src/main/resources/application-docker.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/discovery-server/src/main/resources/application-docker.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/docker-compose.yml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/docker-compose.yml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/inventory-service/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/inventory-service/pom.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/InventoryServiceApplication.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/InventoryServiceApplication.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/controller/InventoryController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/controller/InventoryController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/inventory-service/src/main/resources/application-docker.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/inventory-service/src/main/resources/application-docker.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/inventory-service/src/main/resources/application.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/inventory-service/src/main/resources/application.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/notification-service/src/main/java/uz/abbos/NotificationServiceApplication.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/notification-service/src/main/java/uz/abbos/NotificationServiceApplication.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/notification-service/src/main/resources/application-docker.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/notification-service/src/main/resources/application-docker.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/notification-service/src/main/resources/application.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/notification-service/src/main/resources/application.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/order-service/src/main/java/uz/abbos/OrderServiceApplication.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/order-service/src/main/java/uz/abbos/OrderServiceApplication.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/order-service/src/main/java/uz/abbos/model/Order.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/order-service/src/main/java/uz/abbos/model/Order.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/order-service/src/main/java/uz/abbos/model/OrderItems.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/order-service/src/main/java/uz/abbos/model/OrderItems.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/order-service/src/main/java/uz/abbos/service/OrderService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/order-service/src/main/java/uz/abbos/service/OrderService.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/order-service/src/main/resources/application-docker.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/order-service/src/main/resources/application-docker.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/order-service/src/main/resources/application.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/order-service/src/main/resources/application.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/product-service/src/main/java/uz/abbos/ProductServiceApplication.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/product-service/src/main/java/uz/abbos/ProductServiceApplication.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/product-service/src/main/java/uz/abbos/controller/ProductController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/product-service/src/main/java/uz/abbos/controller/ProductController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/product-service/src/main/java/uz/abbos/dto/ProductDto.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/product-service/src/main/java/uz/abbos/dto/ProductDto.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/product-service/src/main/java/uz/abbos/model/Product.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/product-service/src/main/java/uz/abbos/model/Product.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/product-service/src/main/java/uz/abbos/repository/ProductRepository.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/product-service/src/main/java/uz/abbos/repository/ProductRepository.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/product-service/src/main/java/uz/abbos/service/ProductService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/product-service/src/main/java/uz/abbos/service/ProductService.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/product-service/src/main/resources/application-docker.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/product-service/src/main/resources/application-docker.yaml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/product-service/src/main/resources/application.yaml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/product-service/src/main/resources/application.yaml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2IGXO4W7goUkGEw1idvXg9t1pW4\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RequestMappingsPanelOrder0\": \"0\",\r\n    \"RequestMappingsPanelOrder1\": \"1\",\r\n    \"RequestMappingsPanelWidth0\": \"75\",\r\n    \"RequestMappingsPanelWidth1\": \"75\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"jdk.selected.JAVA_MODULE\": \"1.8 (3)\",\r\n    \"last_opened_file_path\": \"C:/Users/USER/IdeaProjects/microservice-app/realms\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.2\",\r\n    \"run.code.analysis.last.selected.profile\": \"pProject Default\",\r\n    \"settings.editor.selected.configurable\": \"preferences.pluginManager\",\r\n    \"spring.configuration.checksum\": \"e9397b1563c417628e8833f4ff2ac10b\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"DatabaseDriversLRU\": [\r\n      \"mongo\",\r\n      \"postgresql\"\r\n    ],\r\n    \"com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect\": [\r\n      \"PostgreSQL\"\r\n    ]\r\n  }\r\n}]]></component>\r\n  <component name=\"ReactorSettings\">\r\n    <option name=\"notificationShown\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateClassDialog.RecentsKey\">\r\n      <recent name=\"uz.abbos.model\" />\r\n    </key>\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\USER\\IdeaProjects\\microservice-app\\realms\" />\r\n      <recent name=\"C:\\Users\\USER\\IdeaProjects\\microservice-app\\realm\" />\r\n      <recent name=\"C:\\Users\\USER\\IdeaProjects\\microservice-app\\product-service\" />\r\n      <recent name=\"C:\\Users\\USER\\IdeaProjects\\microservice-app\\order-service\" />\r\n      <recent name=\"C:\\Users\\USER\\IdeaProjects\\microservice-app\\inventory-service\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunDashboard\">\r\n    <option name=\"configurationTypes\">\r\n      <set>\r\n        <option value=\"SpringBootApplicationConfigurationType\" />\r\n      </set>\r\n    </option>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Docker.docker-compose.yml.broker: Compose Deployment\">\r\n    <configuration name=\"ApiGatewayApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\">\r\n      <module name=\"api-gateway\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"uz.abbos.ApiGatewayApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"DiscoveryServerApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\">\r\n      <module name=\"discovery-server\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"uz.abbos.DiscoveryServerApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"InventoryServiceApplication (1)\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <option name=\"ACTIVE_PROFILES\" />\r\n      <module name=\"inventory-service\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"uz.abbos.InventoryServiceApplication\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"uz.abbos.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"InventoryServiceApplication (2)\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\" nameIsGenerated=\"true\">\r\n      <option name=\"ACTIVE_PROFILES\" />\r\n      <module name=\"inventory-service\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"uz.abbos.InventoryServiceApplication\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"uz.abbos.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"NotificationServiceApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\">\r\n      <module name=\"notification-service\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"uz.abbos.NotificationServiceApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"OrderServiceApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\">\r\n      <module name=\"order-service\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"uz.abbos.OrderServiceApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ProductServiceApplication\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\">\r\n      <module name=\"product-service\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"uz.abbos.ProductServiceApplication\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"docker-deploy\" factoryName=\"docker-compose.yml\" temporary=\"true\">\r\n      <deployment type=\"docker-compose.yml\">\r\n        <settings />\r\n      </deployment>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"docker-compose.yml.broker: Compose Deployment\" type=\"docker-deploy\" factoryName=\"docker-compose.yml\" temporary=\"true\" server-name=\"Docker\">\r\n      <deployment type=\"docker-compose.yml\">\r\n        <settings>\r\n          <option name=\"services\">\r\n            <list>\r\n              <option value=\"broker\" />\r\n            </list>\r\n          </option>\r\n          <option name=\"sourceFilePath\" value=\"docker-compose.yml\" />\r\n        </settings>\r\n      </deployment>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"docker-compose.yml.order-service: Compose Deployment\" type=\"docker-deploy\" factoryName=\"docker-compose.yml\" temporary=\"true\" server-name=\"Docker\">\r\n      <deployment type=\"docker-compose.yml\">\r\n        <settings>\r\n          <option name=\"services\">\r\n            <list>\r\n              <option value=\"order-service\" />\r\n            </list>\r\n          </option>\r\n          <option name=\"sourceFilePath\" value=\"docker-compose.yml\" />\r\n        </settings>\r\n      </deployment>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"docker-compose.yml.product-service: Compose Deployment\" type=\"docker-deploy\" factoryName=\"docker-compose.yml\" temporary=\"true\" server-name=\"Docker\">\r\n      <deployment type=\"docker-compose.yml\">\r\n        <settings>\r\n          <option name=\"services\">\r\n            <list>\r\n              <option value=\"product-service\" />\r\n            </list>\r\n          </option>\r\n          <option name=\"sourceFilePath\" value=\"docker-compose.yml\" />\r\n        </settings>\r\n      </deployment>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"docker-compose.yml.zipkin: Compose Deployment\" type=\"docker-deploy\" factoryName=\"docker-compose.yml\" temporary=\"true\" server-name=\"Docker\">\r\n      <deployment type=\"docker-compose.yml\">\r\n        <settings>\r\n          <option name=\"services\">\r\n            <list>\r\n              <option value=\"zipkin\" />\r\n            </list>\r\n          </option>\r\n          <option name=\"sourceFilePath\" value=\"docker-compose.yml\" />\r\n        </settings>\r\n      </deployment>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"docker-compose.yml.zookeeper: Compose Deployment\" type=\"docker-deploy\" factoryName=\"docker-compose.yml\" temporary=\"true\" server-name=\"Docker\">\r\n      <deployment type=\"docker-compose.yml\">\r\n        <settings>\r\n          <option name=\"services\">\r\n            <list>\r\n              <option value=\"zookeeper\" />\r\n            </list>\r\n          </option>\r\n          <option name=\"sourceFilePath\" value=\"docker-compose.yml\" />\r\n        </settings>\r\n      </deployment>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"Docker.docker-compose.yml.broker: Compose Deployment\" />\r\n      <item itemvalue=\"Docker.docker-compose.yml.product-service: Compose Deployment\" />\r\n      <item itemvalue=\"Docker.docker-compose.yml.zipkin: Compose Deployment\" />\r\n      <item itemvalue=\"Docker.docker-compose.yml.zookeeper: Compose Deployment\" />\r\n      <item itemvalue=\"Docker.docker-compose.yml.order-service: Compose Deployment\" />\r\n      <item itemvalue=\"Spring Boot.ApiGatewayApplication\" />\r\n      <item itemvalue=\"Spring Boot.DiscoveryServerApplication\" />\r\n      <item itemvalue=\"Spring Boot.ProductServiceApplication\" />\r\n      <item itemvalue=\"Spring Boot.InventoryServiceApplication (2)\" />\r\n      <item itemvalue=\"Spring Boot.InventoryServiceApplication (1)\" />\r\n      <item itemvalue=\"Spring Boot.NotificationServiceApplication\" />\r\n      <item itemvalue=\"Spring Boot.OrderServiceApplication\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Docker.docker-compose.yml.broker: Compose Deployment\" />\r\n        <item itemvalue=\"Docker.docker-compose.yml.zookeeper: Compose Deployment\" />\r\n        <item itemvalue=\"Docker.docker-compose.yml.zipkin: Compose Deployment\" />\r\n        <item itemvalue=\"Docker.docker-compose.yml.product-service: Compose Deployment\" />\r\n        <item itemvalue=\"Docker.docker-compose.yml.order-service: Compose Deployment\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"SpringBeansView\">\r\n    <option name=\"beanDetailsProportion\" value=\"0.3\" />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"064eef11-f301-4a21-bf8c-e6a058e46433\" name=\"Changes\" comment=\"\" />\r\n      <created>1669808860536</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1669808860536</updated>\r\n      <workItem from=\"1669808861807\" duration=\"4855000\" />\r\n      <workItem from=\"1669871030764\" duration=\"11090000\" />\r\n      <workItem from=\"1669883280838\" duration=\"361000\" />\r\n      <workItem from=\"1669883800257\" duration=\"14688000\" />\r\n      <workItem from=\"1670305860362\" duration=\"50287000\" />\r\n      <workItem from=\"1670416361069\" duration=\"8310000\" />\r\n      <workItem from=\"1670560024129\" duration=\"7478000\" />\r\n      <workItem from=\"1670568568728\" duration=\"4291000\" />\r\n      <workItem from=\"1670581996013\" duration=\"6818000\" />\r\n      <workItem from=\"1670589329451\" duration=\"7963000\" />\r\n      <workItem from=\"1670996229750\" duration=\"395000\" />\r\n      <workItem from=\"1670996772845\" duration=\"11921000\" />\r\n      <workItem from=\"1671011179174\" duration=\"16077000\" />\r\n      <workItem from=\"1671027936355\" duration=\"30121000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"add zipkin and Kafka\">\r\n      <created>1670335512499</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670335512499</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"configured NotificationServiceApplication\">\r\n      <created>1670396415134</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670396415134</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"add docker files for dockerize the application\">\r\n      <created>1670423226403</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670423226403</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"fix docker-compose.yml file\">\r\n      <created>1670597496825</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670597496825</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"bug fix and refactoring\">\r\n      <created>1671027899686</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1671027899686</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"6\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"add zipkin and Kafka\" />\r\n    <MESSAGE value=\"configured NotificationServiceApplication\" />\r\n    <MESSAGE value=\"add docker files for dockerize the application\" />\r\n    <MESSAGE value=\"fix docker-compose.yml file\" />\r\n    <MESSAGE value=\"bug fix and refactoring\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"bug fix and refactoring\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/order-service/src/main/java/uz/abbos/service/OrderService.java</url>\r\n          <line>66</line>\r\n          <option name=\"timeStamp\" value=\"11\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/product-service/src/main/java/uz/abbos/service/ProductService.java</url>\r\n          <line>66</line>\r\n          <option name=\"timeStamp\" value=\"19\" />\r\n        </line-breakpoint>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/product-service/src/main/java/uz/abbos/service/ProductService.java</url>\r\n          <line>48</line>\r\n          <option name=\"timeStamp\" value=\"20\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n    <pin-to-top-manager>\r\n      <pinned-members>\r\n        <PinnedItemInfo parentTag=\"org.apache.kafka.clients.consumer.ConsumerRecord\" memberName=\"serializedKeySize\" />\r\n        <PinnedItemInfo parentTag=\"org.apache.kafka.clients.consumer.ConsumerRecord\" memberName=\"offset\" />\r\n      </pinned-members>\r\n    </pin-to-top-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 3a0683a49ce4dfc18669edc31be7330f9f5bf42b)
++++ b/.idea/workspace.xml	(date 1672116993488)
+@@ -4,13 +4,12 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="064eef11-f301-4a21-bf8c-e6a058e46433" name="Changes" comment="bug fix and refactoring">
+-      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/model/ProductDto.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/service/ProductClient.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/dto/ResponseModel.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/realms/realm-export.json" afterDir="false" />
++    <list default="true" id="064eef11-f301-4a21-bf8c-e6a058e46433" name="Changes" comment="fixed feign bug and some refactoring">
++      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/mapper/OrderItemsMapper.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/mapper/OrderMapper.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/repository/ItemsRepository.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/uz/abbos/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/uz/abbos/ApiGatewayApplication.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application-docker.yaml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application-docker.yaml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yaml" afterDir="false" />
+@@ -18,25 +17,29 @@
+       <change beforePath="$PROJECT_DIR$/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/pom.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/InventoryServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/InventoryServiceApplication.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/controller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/controller/InventoryController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/model/ProductDto.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/service/InventoryService.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/service/LoadBalancerConfig.java" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/service/ProductClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/uz/abbos/service/ProductClient.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application-docker.yaml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.yaml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/uz/abbos/NotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/uz/abbos/NotificationServiceApplication.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application-docker.yaml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.yaml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/OrderServiceApplication.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/controller/OrderController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/dto/OrderChildDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/dto/OrderItemsDto.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/dto/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/dto/OrderDto.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/model/Order.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/model/OrderItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/model/OrderItems.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/repository/OrderRepository.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/uz/abbos/service/OrderService.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application-docker.yaml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/ProductServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/ProductServiceApplication.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/controller/ProductController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/dto/ProductDto.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/model/Product.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/repository/ProductRepository.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/uz/abbos/service/ProductService.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application-docker.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application-docker.yaml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.yaml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -47,12 +50,17 @@
+     <option name="RECENT_TEMPLATES">
+       <list>
+         <option value="FxmlFile" />
+-        <option value="Interface" />
+         <option value="Class" />
++        <option value="Interface" />
+       </list>
+     </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="master" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+@@ -74,41 +82,41 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RequestMappingsPanelOrder0": "0",
+-    "RequestMappingsPanelOrder1": "1",
+-    "RequestMappingsPanelWidth0": "75",
+-    "RequestMappingsPanelWidth1": "75",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "WebServerToolWindowFactoryState": "false",
+-    "jdk.selected.JAVA_MODULE": "1.8 (3)",
+-    "last_opened_file_path": "C:/Users/USER/IdeaProjects/microservice-app/realms",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2",
+-    "run.code.analysis.last.selected.profile": "pProject Default",
+-    "settings.editor.selected.configurable": "preferences.pluginManager",
+-    "spring.configuration.checksum": "e9397b1563c417628e8833f4ff2ac10b",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
++    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
++    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
++    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8 (3)&quot;,
++    &quot;last_opened_file_path&quot;: &quot;C:/Users/USER/IdeaProjects/microservice-app/inventory-service/src/main/java/uz/abbos&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
++    &quot;spring.configuration.checksum&quot;: &quot;e9397b1563c417628e8833f4ff2ac10b&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   },
+-  "keyToStringList": {
+-    "DatabaseDriversLRU": [
+-      "mongo",
+-      "postgresql"
++  &quot;keyToStringList&quot;: {
++    &quot;DatabaseDriversLRU&quot;: [
++      &quot;mongo&quot;,
++      &quot;postgresql&quot;
+     ],
+-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
+-      "PostgreSQL"
++    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
++      &quot;PostgreSQL&quot;
+     ]
+   }
+-}]]></component>
++}</component>
+   <component name="ReactorSettings">
+     <option name="notificationShown" value="true" />
+   </component>
+@@ -117,11 +125,11 @@
+       <recent name="uz.abbos.model" />
+     </key>
+     <key name="CopyFile.RECENT_KEYS">
++      <recent name="C:\Users\USER\IdeaProjects\microservice-app\inventory-service\src\main\java\uz\abbos" />
++      <recent name="C:\Users\USER\IdeaProjects\microservice-app\product-service\src\main\java\uz\abbos" />
+       <recent name="C:\Users\USER\IdeaProjects\microservice-app\realms" />
+       <recent name="C:\Users\USER\IdeaProjects\microservice-app\realm" />
+       <recent name="C:\Users\USER\IdeaProjects\microservice-app\product-service" />
+-      <recent name="C:\Users\USER\IdeaProjects\microservice-app\order-service" />
+-      <recent name="C:\Users\USER\IdeaProjects\microservice-app\inventory-service" />
+     </key>
+   </component>
+   <component name="RunDashboard">
+@@ -131,7 +139,7 @@
+       </set>
+     </option>
+   </component>
+-  <component name="RunManager" selected="Docker.docker-compose.yml.broker: Compose Deployment">
++  <component name="RunManager" selected="Docker.docker-compose.yml.postgres-order: Compose Deployment">
+     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+       <module name="api-gateway" />
+       <option name="SPRING_BOOT_MAIN_CLASS" value="uz.abbos.ApiGatewayApplication" />
+@@ -201,12 +209,12 @@
+       </deployment>
+       <method v="2" />
+     </configuration>
+-    <configuration name="docker-compose.yml.broker: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
++    <configuration name="docker-compose.yml.api-gateway: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+       <deployment type="docker-compose.yml">
+         <settings>
+           <option name="services">
+             <list>
+-              <option value="broker" />
++              <option value="api-gateway" />
+             </list>
+           </option>
+           <option name="sourceFilePath" value="docker-compose.yml" />
+@@ -214,12 +222,12 @@
+       </deployment>
+       <method v="2" />
+     </configuration>
+-    <configuration name="docker-compose.yml.order-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
++    <configuration name="docker-compose.yml.broker: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+       <deployment type="docker-compose.yml">
+         <settings>
+           <option name="services">
+             <list>
+-              <option value="order-service" />
++              <option value="broker" />
+             </list>
+           </option>
+           <option name="sourceFilePath" value="docker-compose.yml" />
+@@ -227,12 +235,12 @@
+       </deployment>
+       <method v="2" />
+     </configuration>
+-    <configuration name="docker-compose.yml.product-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
++    <configuration name="docker-compose.yml.keycloak: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+       <deployment type="docker-compose.yml">
+         <settings>
+           <option name="services">
+             <list>
+-              <option value="product-service" />
++              <option value="keycloak" />
+             </list>
+           </option>
+           <option name="sourceFilePath" value="docker-compose.yml" />
+@@ -240,12 +248,12 @@
+       </deployment>
+       <method v="2" />
+     </configuration>
+-    <configuration name="docker-compose.yml.zipkin: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
++    <configuration name="docker-compose.yml.postgres-inventory: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+       <deployment type="docker-compose.yml">
+         <settings>
+           <option name="services">
+             <list>
+-              <option value="zipkin" />
++              <option value="postgres-inventory" />
+             </list>
+           </option>
+           <option name="sourceFilePath" value="docker-compose.yml" />
+@@ -253,12 +261,12 @@
+       </deployment>
+       <method v="2" />
+     </configuration>
+-    <configuration name="docker-compose.yml.zookeeper: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
++    <configuration name="docker-compose.yml.postgres-order: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+       <deployment type="docker-compose.yml">
+         <settings>
+           <option name="services">
+             <list>
+-              <option value="zookeeper" />
++              <option value="postgres-order" />
+             </list>
+           </option>
+           <option name="sourceFilePath" value="docker-compose.yml" />
+@@ -267,26 +275,26 @@
+       <method v="2" />
+     </configuration>
+     <list>
++      <item itemvalue="Docker.docker-compose.yml.api-gateway: Compose Deployment" />
+       <item itemvalue="Docker.docker-compose.yml.broker: Compose Deployment" />
+-      <item itemvalue="Docker.docker-compose.yml.product-service: Compose Deployment" />
+-      <item itemvalue="Docker.docker-compose.yml.zipkin: Compose Deployment" />
+-      <item itemvalue="Docker.docker-compose.yml.zookeeper: Compose Deployment" />
+-      <item itemvalue="Docker.docker-compose.yml.order-service: Compose Deployment" />
++      <item itemvalue="Docker.docker-compose.yml.postgres-inventory: Compose Deployment" />
++      <item itemvalue="Docker.docker-compose.yml.postgres-order: Compose Deployment" />
++      <item itemvalue="Docker.docker-compose.yml.keycloak: Compose Deployment" />
++      <item itemvalue="Spring Boot.DiscoveryServerApplication" />
++      <item itemvalue="Spring Boot.OrderServiceApplication" />
+       <item itemvalue="Spring Boot.ApiGatewayApplication" />
+-      <item itemvalue="Spring Boot.DiscoveryServerApplication" />
+       <item itemvalue="Spring Boot.ProductServiceApplication" />
+       <item itemvalue="Spring Boot.InventoryServiceApplication (2)" />
+       <item itemvalue="Spring Boot.InventoryServiceApplication (1)" />
+       <item itemvalue="Spring Boot.NotificationServiceApplication" />
+-      <item itemvalue="Spring Boot.OrderServiceApplication" />
+     </list>
+     <recent_temporary>
+       <list>
++        <item itemvalue="Docker.docker-compose.yml.keycloak: Compose Deployment" />
++        <item itemvalue="Docker.docker-compose.yml.postgres-inventory: Compose Deployment" />
+         <item itemvalue="Docker.docker-compose.yml.broker: Compose Deployment" />
+-        <item itemvalue="Docker.docker-compose.yml.zookeeper: Compose Deployment" />
+-        <item itemvalue="Docker.docker-compose.yml.zipkin: Compose Deployment" />
+-        <item itemvalue="Docker.docker-compose.yml.product-service: Compose Deployment" />
+-        <item itemvalue="Docker.docker-compose.yml.order-service: Compose Deployment" />
++        <item itemvalue="Docker.docker-compose.yml.api-gateway: Compose Deployment" />
++        <item itemvalue="Docker.docker-compose.yml.postgres-order: Compose Deployment" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -314,7 +322,12 @@
+       <workItem from="1670996229750" duration="395000" />
+       <workItem from="1670996772845" duration="11921000" />
+       <workItem from="1671011179174" duration="16077000" />
+-      <workItem from="1671027936355" duration="30121000" />
++      <workItem from="1671027936355" duration="54103000" />
++      <workItem from="1671254999754" duration="12419000" />
++      <workItem from="1671270455712" duration="11519000" />
++      <workItem from="1671425066918" duration="478000" />
++      <workItem from="1671425555514" duration="159711000" />
++      <workItem from="1672046993026" duration="4283000" />
+     </task>
+     <task id="LOCAL-00001" summary="add zipkin and Kafka">
+       <created>1670335512499</created>
+@@ -351,7 +364,42 @@
+       <option name="project" value="LOCAL" />
+       <updated>1671027899686</updated>
+     </task>
+-    <option name="localTasksCounter" value="6" />
++    <task id="LOCAL-00006" summary="add FeignClient">
++      <created>1671116530019</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1671116530019</updated>
++    </task>
++    <task id="LOCAL-00007" summary="fixed bugs and refactoring">
++      <created>1671116570700</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1671116570700</updated>
++    </task>
++    <task id="LOCAL-00008" summary="refactoring">
++      <created>1671284749288</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1671284749288</updated>
++    </task>
++    <task id="LOCAL-00009" summary="fixed critical bug and some refactoring">
++      <created>1671543112379</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1671543112379</updated>
++    </task>
++    <task id="LOCAL-00010" summary="fixed feign bug and some refactoring">
++      <created>1671634711036</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1671634711036</updated>
++    </task>
++    <option name="localTasksCounter" value="11" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -374,32 +422,20 @@
+     <MESSAGE value="add docker files for dockerize the application" />
+     <MESSAGE value="fix docker-compose.yml file" />
+     <MESSAGE value="bug fix and refactoring" />
+-    <option name="LAST_COMMIT_MESSAGE" value="bug fix and refactoring" />
++    <MESSAGE value="add FeignClient" />
++    <MESSAGE value="fixed bugs and refactoring" />
++    <MESSAGE value="refactoring" />
++    <MESSAGE value="fixed critical bug and some refactoring" />
++    <MESSAGE value="fixed feign bug and some refactoring" />
++    <option name="LAST_COMMIT_MESSAGE" value="fixed feign bug and some refactoring" />
+   </component>
+   <component name="XDebuggerManager">
+-    <breakpoint-manager>
+-      <breakpoints>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/order-service/src/main/java/uz/abbos/service/OrderService.java</url>
+-          <line>66</line>
+-          <option name="timeStamp" value="11" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/product-service/src/main/java/uz/abbos/service/ProductService.java</url>
+-          <line>66</line>
+-          <option name="timeStamp" value="19" />
+-        </line-breakpoint>
+-        <line-breakpoint enabled="true" type="java-line">
+-          <url>file://$PROJECT_DIR$/product-service/src/main/java/uz/abbos/service/ProductService.java</url>
+-          <line>48</line>
+-          <option name="timeStamp" value="20" />
+-        </line-breakpoint>
+-      </breakpoints>
+-    </breakpoint-manager>
+     <pin-to-top-manager>
+       <pinned-members>
++        <PinnedItemInfo parentTag="feign.ReflectiveFeign$FeignInvocationHandler" memberName="dispatch" />
+         <PinnedItemInfo parentTag="org.apache.kafka.clients.consumer.ConsumerRecord" memberName="serializedKeySize" />
+         <PinnedItemInfo parentTag="org.apache.kafka.clients.consumer.ConsumerRecord" memberName="offset" />
++        <PinnedItemInfo parentTag="uz.abbos.model.Order" memberName="orderItems" />
+       </pinned-members>
+     </pin-to-top-manager>
+   </component>

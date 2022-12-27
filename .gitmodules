@@ -1,0 +1,6 @@
+[submodule "microservice-app"]
+	path = microservice-app
+	url = https://github.com/AbbosAbduhakimov/microservice-app.git
+[submodule "config-server"]
+	path = config-server
+	url = ./config-server
