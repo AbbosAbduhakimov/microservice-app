@@ -8,6 +8,8 @@ spring:
       probability: 1.0
   datasource:
     driver-class-name: org.postgresql.Driver
+
+
     url: jdbc:postgresql://postgres-order:5431/order_service_db
   jpa:
     show-sql: true
