@@ -1,0 +1,43 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    discovery:
+      enabled: true
+    refresh:
+      additional-property-sources-to-retain:
+        - configServerClient
+    bus:
+      enabled: true
+      refresh:
+        enabled: true
+    config:
+      server:
+        git:
+          uri: https://github.com/happyDuke96/config-repo.git
+          default-label: master
+          clone-on-start: true
+          search-paths:
+            '*,{application},config/{application}, config/, config/*'
+          username: happyDuke96
+          password: abbos9113
+        enabled: true
+      fail-fast: true
+  rabbitmq:
+    #    addresses: ${RABBITMQ_SERVICE_SERVICE_HOST:localhost}
+    port: ${RABBIT_MQ_PORT:5672}
+    username: ${RABBIT_MQ_URSER_NAME:guest}
+    password: ${RABBIT_MQ_URSER_PASSWORD:guest}
+    host: ${RABBIT_MQ_HOST:localhost}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka:password@localhost:8761/eureka
+
