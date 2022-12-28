@@ -142,7 +142,7 @@ services:
   #   Eureka Server compose config
   discovery-server:
     image: discovery-server:1.0-SNAPSHOT
-    container_name: discovery-server
+    container_name: discovery-1server
     hostname: discovery-server
     #    pull_policy: always
     ports:
